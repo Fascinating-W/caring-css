@@ -1,0 +1,148 @@
+.bg-red {
+	background-color: #e54d42;
+	color: #ffffff;
+	&.light {
+		color: #e54d42;
+		background-color: #fadbd9;
+	}
+}
+
+.bg-orange {
+	background-color: #f37b1d;
+	color: #ffffff;
+	&.light {
+		color: #f37b1d;
+		background-color: #fde6d2;
+	}
+}
+
+.bg-yellow {
+	background-color: #fbbd08;
+	color: #333333;
+	&.light {
+		color: #fbbd08;
+		background-color: #fef2ced2;
+	}
+}
+
+.bg-olive {
+	background-color: #8dc63f;
+	color: #ffffff;
+	&.light {
+		color: #8dc63f;
+		background-color: #e8f4d9;
+	}
+}
+
+.bg-green {
+	background-color: #39b54a;
+	color: #ffffff;
+	&.light {
+		color: #39b54a;
+		background-color: #d7f0dbff;
+	}
+}
+
+.bg-cyan {
+	background-color: #1cbbb4;
+	color: #ffffff;
+	&.light {
+		color: #1cbbb4;
+		background-color: #d2f1f0;
+	}
+}
+
+.bg-blue {
+	background-color: #0081ff;
+	color: #ffffff;
+	&.light {
+		color: #0081ff;
+		background-color: #cce6ff;
+	}
+}
+
+.bg-purple {
+	background-color: #6739b6;
+	color: #ffffff;
+	&.light {
+		color: #6739b6;
+		background-color: #e1d7f0;
+	}
+}
+
+.bg-mauve {
+	background-color: #9c26b0;
+	color: #ffffff;
+	&.light {
+		color: #9c26b0;
+		background-color: #ebd4ef;
+	}
+}
+
+.bg-pink {
+	background-color: #e03997;
+	color: #ffffff;
+	&.light {
+		color: #e03997;
+		background-color: #f9d7ea;
+	}
+}
+
+.bg-brown {
+	background-color: #a5673f;
+	color: #ffffff;
+	&.light {
+		color: #a5673f;
+		background-color: #ede1d9;
+	}
+}
+
+.bg-grey {
+	background-color: #8799a3;
+	color: #ffffff;
+	&.light {
+		color: #8799a3;
+		background-color: #e7ebed;
+	}
+	
+}
+.bg-gray {
+	background-color: #f0f0f0;
+	color: #333333;
+	// 没有浅色
+}
+
+.bg-black {
+	background-color: #333333;
+	color: #ffffff;
+	// 没有浅色
+}
+
+.bg-white, .bg-fff {
+	background-color: #ffffff;
+	color: #333;
+	// 没有浅色
+}
+.bg-f8 {
+  background-color: #f8f8f8;
+	color: #333;
+}
+.bg-transparent {
+	background-color: transparent;
+}
+.bg-current {
+	background-color: currentColor;
+}
+
+.bg-center {
+	background-position: center;
+}
+.bg-auto {
+	background-size: auto;
+}
+.bg-cover {
+	background-size: cover;
+}
+.bg-contain {
+	background-size: contain;
+}

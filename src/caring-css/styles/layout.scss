@@ -1,0 +1,93 @@
+// 高度
+.h-full {
+	height: 100%;
+}
+
+.h-screen {
+	height: 100vh;
+}
+
+// 定位
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+
+// 浮动
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+.float-none {
+	float: none;
+}
+.clear {
+	clear: both;
+}
+
+// 溢出
+.overflow-auto {
+	overflow: auto;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.overflow-visible {
+	overflow: visible;
+}
+
+// display
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+.flex {
+	display: flex;
+}
+.inline-flex {
+	display: inline-flex;
+}
+.none {
+	display: none;
+}
+
+// 可见性
+.visible {
+	visibility: visible;
+}
+.hidden {
+	visibility: hidden;
+}
+
+// 宽度
+@for $i from 0 through 200 {
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		.w-#{$i} {
+			width: #{$i}px;
+		}
+	}
+}
+// 高度
+@for $i from 0 through 200 {
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		.h-#{$i} {
+			height: #{$i}px;
+		}
+	}
+}
+@for $i from 0 through 30 {
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		.lh-#{$i} {
+			line-height: #{$i}px;
+		}
+	}
+}

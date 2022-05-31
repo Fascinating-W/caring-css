@@ -1,0 +1,76 @@
+/**
+间距
+*/
+
+// 居中对齐
+.m-auto,.view-center {
+	margin: auto
+}
+// 块级容器右对齐
+.view-right {
+	margin-left: auto;
+}
+
+// 默认 15px 间距
+@each $key in margin, padding, margin-top, margin-left, margin-right,margin-bottom, padding-top,padding-bottom, padding-left, padding-right{
+	.#{$key} {
+		#{$key}: 15px !important;
+	}
+}
+
+// 边距 0 - 30px
+@for $i from 0 through 30 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		// 得出：margin-30或者m-30
+		.margin-#{$i}, .m-#{$i} {
+			margin: #{$i}px;
+		}
+		// 得出：padding-30或者p-30
+		.padding-#{$i}, .p-#{$i} {
+			padding: #{$i}px;
+		}
+		
+		.m-x-#{$i} {
+			margin-left: #{$i}px;
+			margin-right: #{$i}px;
+		}
+		.m-y-#{$i} {
+			margin-top: #{$i}px;
+			margin-bottom: #{$i}px;
+		}
+		.p-x-#{$i} {
+			padding-left: #{$i}px;
+			padding-right: #{$i}px;
+		}
+		.p-y-#{$i} {
+			padding-top: #{$i}px;
+			padding-bottom: #{$i}px;
+		}
+		
+		
+		@each $short, $long in l left, t top, r right, b bottom{
+			// 缩写版，结果如： m-l-30
+			// 定义外边距
+			.m-#{$short}-#{$i} {
+				margin-#{$long}: $i + px!important;
+			}
+			
+			// 定义内边距
+			.p-#{$short}-#{$i} {
+				padding-#{$long}: $i + px!important;
+			}
+			
+			// 完整版，结果如：margin-left-30
+			// 定义外边距
+			.margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + px!important;
+			}
+			
+			// 定义内边距
+			.padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + px!important;
+			}
+		}
+	}
+}

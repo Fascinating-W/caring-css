@@ -1,0 +1,142 @@
+@for $i from 0 through 6 {
+	.flex-#{$i} {
+		flex: $i;
+	}
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
+// 水平垂直居中
+.flex-cc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-row	{
+	display: flex;
+	flex-direction: row;
+}
+.flex-row-reverse {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.flex-col	{
+	display: flex;
+	flex-direction: column;
+}
+.flex-col-reverse {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.flex-wrap	{
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-nowrap	{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+//Justify Content
+// 用于控制 flex 和 grid 项目如何沿着容器的主轴定位的功能类。
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+// 使每个项目两侧的距离相等。
+.justify-around {
+	justify-content: space-around;
+}
+// 使每个项目周围的距离相等,但不像使用 justify-around 时项目之间有双倍的距离。
+.justify-evenly {
+	justify-content: space-evenly;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+.align-center {
+	align-items: center;
+}
+
+.align-stretch {
+	// 默认值，即flex容器内的子元素默认会拉伸和父元素一样的高度
+	align-items: stretch;
+}
+.align-baseline {
+	align-items: flex-baseline;
+}
+
+// 控制单个 flex 或网格项如何沿其容器的交叉轴定位的功能类。
+.self-auto {
+	align-self: auto;
+}
+.self-start {
+	align-self: flex-start;
+}
+.self-end {
+	align-self: flex-end;
+}
+.self-center {
+	align-self: center;
+}
+.self-stretch {
+	align-self: stretch;
+}
+
+// 控制 flex 项目缩小的功能类
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.flex-shrink	{
+  flex-shrink: 1;
+}
+// 控制 flex 项目放大的功能类
+.flex-grow-0 {
+	flex-grow: 0 // 默认
+}
+.flex-grow {
+	// 等同于flex:1的效果
+	flex-grow: 1;
+}
+
+// grid-布局
+// 作用在父容器上
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	&.col-2>view {
+		width: 50%;
+	}
+
+	&.col-3>view {
+		width: 33.33%;
+	}
+
+	&.col-4>view {
+		width: 25%;
+	}
+
+	&.col-5>view {
+		width: 20%;
+	}
+}
