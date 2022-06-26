@@ -1,15 +1,15 @@
 // 圆角
-// 默认8px,
+// 默认4px,
 // 8-24px
-.radius {
-  border-radius: 8px;
+.rounded {
+  border-radius: 4px;
 }
-.round {
-  border-radius: 50%;
+.rounded-full {
+  border-radius: 9999px;
 }
-@for $i from 10 through 24 {
+@for $i from 6 through 24 {
   @if $i % 2==0 or $i % 5==0 {
-    .radius-#{$i} {
+    .rounded-#{$i} {
       border-radius: #{$i}px;
     }
   }
@@ -17,19 +17,19 @@
 
 /* start--Retina 屏幕下的 1px 边框--start */
 .border,
-.border-bottom,
-.border-left,
-.border-right,
-.border-top,
-.border-top-bottom {
+.border-b,
+.border-l,
+.border-r,
+.border-t,
+.border-tb {
   position: relative
 }
 
-.border-bottom:after,
-.border-left:after,
-.border-right:after,
-.border-top-bottom:after,
-.border-top:after,
+.border-b:after,
+.border-l:after,
+.border-r:after,
+.border-tb:after,
+.border-t:after,
 .border:after {
   /* #ifndef APP-NVUE */
   content: ' ';
@@ -49,23 +49,23 @@
   z-index: 2;
 }
 
-.border-top:after {
+.border-t:after {
   border-top-width: 1px
 }
 
-.border-left:after {
+.border-l:after {
   border-left-width: 1px
 }
 
-.border-right:after {
+.border-r:after {
   border-right-width: 1px
 }
 
-.border-bottom:after {
+.border-b:after {
   border-bottom-width: 1px
 }
 
-.border-top-bottom:after {
+.border-tb:after {
   border-width: 1px 0
 }
 

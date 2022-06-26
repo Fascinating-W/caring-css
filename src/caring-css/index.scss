@@ -1,8 +1,10 @@
 // 背景颜色
-@import 'styles/base.scss';
+@import 'styles/preflight.scss';
+@import 'styles/layout.scss';
+@import 'styles/flex.scss';
+@import 'styles/spacing.scss';
+@import 'styles/dimension.scss';
+@import 'styles/typography.scss';
 @import 'styles/bg.scss';
 @import 'styles/border.scss';
-@import 'styles/spacing.scss';
-@import 'styles/flex.scss';
-@import 'styles/text.scss';
-@import 'styles/layout.scss';
+@import 'styles/Interactivity.scss';

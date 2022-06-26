@@ -1,7 +1,3 @@
-/**
-间距
-*/
-
 // 居中对齐
 .m-auto,.view-center {
 	margin: auto
@@ -12,65 +8,88 @@
 }
 
 // 默认 15px 间距
-@each $key in margin, padding, margin-top, margin-left, margin-right,margin-bottom, padding-top,padding-bottom, padding-left, padding-right{
+@each $key,$value in 
+m margin,
+p padding,
+mt margin-top,
+ml margin-left,
+mr margin-right,
+mb margin-bottom,
+pt padding-top,
+pb padding-bottom,
+pl padding-left,
+pr padding-right {
 	.#{$key} {
-		#{$key}: 15px !important;
+		#{$value}: 15px;
 	}
 }
 
 // 边距 0 - 30px
 @for $i from 0 through 30 {
 	// 只要双数和能被5除尽的数
-	@if $i % 2 == 0 or $i % 5 == 0 {
-		// 得出：margin-30或者m-30
-		.margin-#{$i}, .m-#{$i} {
+	@if $i % 2 == 0 or $i % 5 == 0  {
+		.m-#{$i} {
 			margin: #{$i}px;
 		}
-		// 得出：padding-30或者p-30
-		.padding-#{$i}, .p-#{$i} {
+		.p-#{$i} {
 			padding: #{$i}px;
 		}
 		
-		.m-x-#{$i} {
+		.mx-#{$i} {
 			margin-left: #{$i}px;
 			margin-right: #{$i}px;
 		}
-		.m-y-#{$i} {
+		.my-#{$i} {
 			margin-top: #{$i}px;
 			margin-bottom: #{$i}px;
 		}
-		.p-x-#{$i} {
+		.px-#{$i} {
 			padding-left: #{$i}px;
 			padding-right: #{$i}px;
 		}
-		.p-y-#{$i} {
+		.py-#{$i} {
 			padding-top: #{$i}px;
 			padding-bottom: #{$i}px;
 		}
+		/* #ifdef H5 */
+		.space-x-#{$i} {
+			&>:not([hidden])~:not([hidden]) {
+				--caring-space-x-reverse: 0;
+				margin-right: calc(#{$i}px * var(--caring-space-x-reverse));
+				margin-left: calc(#{$i}px * calc(1 - var(--caring-space-x-reverse)));
+			}
+		}
 		
+		.space-y-#{$i} {
+			&>:not([hidden])~:not([hidden]) {
+				--caring-space-y-reverse: 0;
+				margin-top: calc(#{$i}px * calc(1 - var(--caring-space-y-reverse)));
+				margin-bottom: calc(#{$i}px * var(--caring-space-y-reverse));
+			}
+		}
+		/* #endif */
 		
 		@each $short, $long in l left, t top, r right, b bottom{
 			// 缩写版，结果如： m-l-30
 			// 定义外边距
-			.m-#{$short}-#{$i} {
-				margin-#{$long}: $i + px!important;
+			.m#{$short}-#{$i} {
+				margin-#{$long}: $i + px;
 			}
 			
 			// 定义内边距
-			.p-#{$short}-#{$i} {
-				padding-#{$long}: $i + px!important;
-			}
-			
-			// 完整版，结果如：margin-left-30
-			// 定义外边距
-			.margin-#{$long}-#{$i} {
-				margin-#{$long}: $i + px!important;
-			}
-			
-			// 定义内边距
-			.padding-#{$long}-#{$i} {
-				padding-#{$long}: $i + px!important;
+			.p#{$short}-#{$i} {
+				padding-#{$long}: $i + px;
 			}
 		}
 	}
+
 }
+
+/* #ifdef H5 */
+.space-x-reverse> :not([hidden])~ :not([hidden]) {
+	--caring-space-x-reverse: 1;
+}
+.space-y-reverse> :not([hidden])~ :not([hidden]) {
+	--caring-space-y-reverse: 1;
+}
+/* #endif */

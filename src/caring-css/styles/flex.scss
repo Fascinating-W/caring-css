@@ -1,12 +1,4 @@
-@for $i from 0 through 6 {
-	.flex-#{$i} {
-		flex: $i;
-	}
-}
-.flex-center {
-	display: flex;
-	align-items: center;
-}
+
 
 // 水平垂直居中
 .flex-cc {
@@ -15,30 +7,72 @@
 	justify-content: center;
 }
 
-.flex-row	{
+.flex-center {
 	display: flex;
-	flex-direction: row;
+	align-items: center;
 }
-.flex-row-reverse {
-	display: flex;
-	flex-direction: row-reverse;
+
+@each $key,$value in row row,row-reverse row-reverse,col column,col-reverse column-reverse{
+	.flex-#{$key} {
+		display: flex;
+		flex-direction: #{$value};
+	}
 }
-.flex-col	{
-	display: flex;
-	flex-direction: column;
+
+// Flex Wrap
+@each $key in wrap,
+wrap-reverse,
+nowrap {
+	.flex-#{$key} {
+		display: flex;
+		flex-wrap: #{$key};
+	}
 }
-.flex-col-reverse {
-	display: flex;
-	flex-direction: column-reverse;
+
+@for $i from 0 through 6 {
+	.flex-#{$i} {
+		flex: $i;
+	}
 }
-.flex-wrap	{
-	display: flex;
-	flex-wrap: wrap;
+.flex-auto {
+	flex: 1 1 auto;
 }
-.flex-nowrap	{
-	display: flex;
-	flex-wrap: nowrap;
+.flex-initial {
+	flex: 0 1 auto;
 }
+.flex-none {
+	flex:none
+}
+
+@for $i from 0 through 6 {
+	.flex-#{$i} {
+		flex: $i;
+	}
+	.order-#{$i} {
+		order: $i;
+	}
+}
+.order-first {
+	order: -9999;
+}
+.order-last {
+	order: 9999;
+}
+
+@for $i from 0 through 20 {
+	.gap-#{$i} {
+		gap: #{$i}px;
+	}
+
+	.gap-x-#{$i} {
+		column-gap: #{$i}px;
+	}
+
+	.gap-y-#{$i} {
+		row-gap: #{$i}px;
+	}
+}
+
 
 //Justify Content
 // 用于控制 flex 和 grid 项目如何沿着容器的主轴定位的功能类。
@@ -66,40 +100,31 @@
 	justify-content: space-evenly;
 }
 
-.align-start {
-	align-items: flex-start;
-}
-
-.align-end {
-	align-items: flex-end;
-}
-.align-center {
-	align-items: center;
-}
-
-.align-stretch {
+@each $key,
+$value in start flex-start, 
+center center,
+end flex-end,
+stretch stretch,
+baseline flex-baseline {
+	// align-stretch 
 	// 默认值，即flex容器内的子元素默认会拉伸和父元素一样的高度
-	align-items: stretch;
-}
-.align-baseline {
-	align-items: flex-baseline;
+	.items-#{$key} {
+		align-items: #{$value};
+	}
 }
 
 // 控制单个 flex 或网格项如何沿其容器的交叉轴定位的功能类。
-.self-auto {
-	align-self: auto;
-}
-.self-start {
-	align-self: flex-start;
-}
-.self-end {
-	align-self: flex-end;
-}
-.self-center {
-	align-self: center;
-}
-.self-stretch {
-	align-self: stretch;
+@each $key,
+$value in 
+auto, auto,
+start flex-start,
+center center,
+end flex-end,
+stretch stretch,
+baseline flex-baseline {
+	.self-#{$key} {
+		align-self: #{$value};
+	}
 }
 
 // 控制 flex 项目缩小的功能类
@@ -118,25 +143,73 @@
 	flex-grow: 1;
 }
 
-// grid-布局
-// 作用在父容器上
-.grid {
-	display: flex;
-	flex-wrap: wrap;
-
-	&.col-2>view {
-		width: 50%;
-	}
-
-	&.col-3>view {
-		width: 33.33%;
-	}
-
-	&.col-4>view {
-		width: 25%;
-	}
-
-	&.col-5>view {
-		width: 20%;
+@each $key, $value in center center,
+start flex-start,
+end flex-end,
+between space-between,
+around space-around,
+evenly space-evenly {
+	.content-#{$key} {
+		align-content: #{$value};
 	}
 }
+// 使用 grid-cols-{n} 功能类来创建有 n 个同等大小的列的网格。
+@for $i from 1 through 6 {
+	.grid-cols-#{$i} {
+		grid-template-columns: repeat($i, minmax(0, 1fr));
+	}
+	.grid-rows-#{$i} {
+		// 和grid-flow-col搭配使用才会有效果，单独使用没有效果
+		grid-template-rows: repeat($i, minmax(0, 1fr));
+	}
+	// 用于控制在网格列中元素的大小和放置方式的功能类。
+	// 使用 col-span-{n} 功能类使元素跨越 n 列。
+
+	.col-span-#{$i} {
+		grid-column: span $i / span $i;
+	}
+}
+.grid-cols-none {
+	grid-template-columns: none;
+}
+.grid-rows-none {
+	grid-template-rows: none;
+}
+.col-auto {
+	grid-column: auto;
+}
+.col-span-full {
+	grid-column: 1 / -1;
+}
+
+// 用于控制网格中元素如何自动放置的功能类。
+.grid-flow-row {
+	grid-auto-flow: row;
+}
+.grid-flow-col {
+	grid-auto-flow: column;
+}
+.grid-flow-row-dense {
+	grid-auto-flow: row dense;
+}
+.grid-flow-col-dense {
+	grid-auto-flow: column dense;
+}
+
+// 用于控制网格项目如何沿其内联轴对齐的功能类。
+@each $key in start,
+end,center,stretch {
+	.justify-items-#{$key} {
+		justify-items: #{$key}
+	}
+}
+
+@each $key in auto, start,
+end,
+center,
+stretch {
+	.justify-self-#{$key} {
+		justify-self: #{$key}
+	}
+}
+

@@ -1,148 +1,62 @@
-.bg-red {
-	background-color: #e54d42;
-	color: #ffffff;
-	&.light {
-		color: #e54d42;
-		background-color: #fadbd9;
+@each $key, $value,$value2 in 
+red #e54d42 #fadbd9, 
+orange #f37b1d #fde6d2,
+yellow #fbbd08 #fef2ce,
+green #39b54a #d7f0dbff,
+blue #0081ff #cce6ff,
+cyan #1cbbb4 #d2f1f0,
+purple #6739b6 #e1d7f0,
+mauve #9c26b0 #ebd4ef,
+pink #e03997 #f9d7ea,
+olive #8dc63f #e8f4d9,
+brown #a5673f #ede1d9,
+grey #8799a3 #e7ebed,
+gray #aaaaaa,
+black #000,
+ccc #ccc,
+333 #333,
+666 #666,
+999 #999,
+{
+	.bg-#{$key} {
+		background-color: $value;
+		color: #fff;
+		&-light{
+			color: $value;
+			background-color: $value2;
+		}
 	}
 }
 
-.bg-orange {
-	background-color: #f37b1d;
-	color: #ffffff;
-	&.light {
-		color: #f37b1d;
-		background-color: #fde6d2;
-	}
-}
-
-.bg-yellow {
-	background-color: #fbbd08;
-	color: #333333;
-	&.light {
-		color: #fbbd08;
-		background-color: #fef2ced2;
-	}
-}
-
-.bg-olive {
-	background-color: #8dc63f;
-	color: #ffffff;
-	&.light {
-		color: #8dc63f;
-		background-color: #e8f4d9;
-	}
-}
-
-.bg-green {
-	background-color: #39b54a;
-	color: #ffffff;
-	&.light {
-		color: #39b54a;
-		background-color: #d7f0dbff;
-	}
-}
-
-.bg-cyan {
-	background-color: #1cbbb4;
-	color: #ffffff;
-	&.light {
-		color: #1cbbb4;
-		background-color: #d2f1f0;
-	}
-}
-
-.bg-blue {
-	background-color: #0081ff;
-	color: #ffffff;
-	&.light {
-		color: #0081ff;
-		background-color: #cce6ff;
-	}
-}
-
-.bg-purple {
-	background-color: #6739b6;
-	color: #ffffff;
-	&.light {
-		color: #6739b6;
-		background-color: #e1d7f0;
-	}
-}
-
-.bg-mauve {
-	background-color: #9c26b0;
-	color: #ffffff;
-	&.light {
-		color: #9c26b0;
-		background-color: #ebd4ef;
-	}
-}
-
-.bg-pink {
-	background-color: #e03997;
-	color: #ffffff;
-	&.light {
-		color: #e03997;
-		background-color: #f9d7ea;
-	}
-}
-
-.bg-brown {
-	background-color: #a5673f;
-	color: #ffffff;
-	&.light {
-		color: #a5673f;
-		background-color: #ede1d9;
-	}
-}
-
-.bg-grey {
-	background-color: #8799a3;
-	color: #ffffff;
-	&.light {
-		color: #8799a3;
-		background-color: #e7ebed;
-	}
-	
-}
 .bg-gray {
 	background-color: #f0f0f0;
-	color: #333333;
-	// 没有浅色
 }
 
-.bg-black {
-	background-color: #333333;
-	color: #ffffff;
-	// 没有浅色
+@each $key, $value in 
+gray #f0f0f0,
+black #000,
+white #fff,
+f8 #f8f8f8,
+eee #eee,
+transparent transparent,
+current currentColor{
+	.bg-#{$key} {
+		background-color: $value;
+	}
 }
 
-.bg-white, .bg-fff {
-	background-color: #ffffff;
-	color: #333;
-	// 没有浅色
-}
-.bg-f8 {
-  background-color: #f8f8f8;
-	color: #333;
-}
-.bg-transparent {
-	background-color: transparent;
-}
-.bg-current {
-	background-color: currentColor;
+
+
+@each $key in auto, cover, contain {
+	.bg-#{$key} {
+		background-size: $key;
+	}
 }
 
 .bg-center {
 	background-position: center;
 }
-.bg-auto {
-	background-size: auto;
-}
-.bg-cover {
-	background-size: cover;
-}
-.bg-contain {
-	background-size: contain;
+
+.bg-no-repeat {
+	background-repeat: no-repeat;
 }

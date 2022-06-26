@@ -1,0 +1,162 @@
+// 排版
+.text-base {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// 字体大小10-40px
+@for $i from 10 through 40 {
+  @if $i % 2==0 {
+    .text-#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+// 行高：12-40px
+@for $i from 12 through 40 {
+  @if $i % 4==0 {
+    .leading-#{$i} {
+      line-height: #{$i}px;
+    }
+  }
+}
+
+/* 
+文本对齐
+用来控制文本对齐的功能类。
+ */
+@each $key in left, center, right, justify {
+  .text-#{$key} {
+    text-align: #{$key}
+  }
+}
+
+// 文字颜色
+@each $key, $value in 
+red #e54d42, 
+orange #f37b1d,
+yellow #fbbd08,
+green #39b54a,
+blue #0081ff,
+cyan #1cbbb4,
+purple #6739b6,
+mauve #9c26b0,
+pink #e03997,
+olive #8dc63f,
+brown #a5673f,
+grey #8799a3,
+gray #aaaaaa,
+white #fff,
+black #000,
+ccc #ccc,
+333 #333,
+666 #666,
+999 #999,
+{
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+// 文本装饰
+.underline {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.no-underline	{
+  text-decoration: none;
+}
+
+// 文本转换
+.text-Abc {
+	text-transform: Capitalize;
+}
+
+.text-ABC {
+	text-transform: Uppercase;
+}
+
+.text-abc {
+	text-transform: Lowercase;
+}
+
+.text-price {
+  &::before {
+    content: "¥";
+    font-size: 80%;
+    margin-right: 4px;
+  }
+}
+
+.truncate, .line-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.line-2 {
+	-webkit-line-clamp: 2;
+}
+
+.line-3 {
+	-webkit-line-clamp: 3;
+}
+
+.line-2,
+.line-3 {
+	overflow: hidden;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box; // 弹性伸缩盒
+	-webkit-box-orient: vertical; // 设置伸缩盒子元素排列方式
+}
+
+// 垂直对齐
+@each $key in baseline, top, middle, bottom, text-top,text-bottom {
+  .align-#{$key} {
+    vertical-align: $key;
+  }
+}
+
+// 空格
+@each $key in normal, nowrap, pre, pre-line, pre-wrap {
+  .whitespace-#{$key} {
+    white-space: $key;
+  }
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.break-words {
+  overflow-wrap: break-word;
+}
+.break-all {
+  word-break: break-all;
+}
+

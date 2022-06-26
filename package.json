@@ -90,6 +90,7 @@
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
+    "postcss-class-rename": "^1.0.1",
     "postcss-comment": "^2.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",

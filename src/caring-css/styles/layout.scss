@@ -1,93 +1,93 @@
-// 高度
-.h-full {
-	height: 100%;
+// Box Sizing
+.box-border {
+	box-sizing: border-box;
+}
+.box-content {
+	box-sizing: content-box;
 }
 
-.h-screen {
-	height: 100vh;
-}
 
-// 定位
-.relative {
-	position: relative;
+// Display
+@each $key in  block, inline-block,inline, flex,inline-flex, none, grid{
+	.#{$key} {
+		display: $key;
+	}
 }
-.absolute {
-	position: absolute;
+.hidden {
+	display: none;
 }
 
 // 浮动
-.float-right {
-	float: right;
+@each $key in right, left, none {
+	.float-#{$key} {
+		float: $key;
+	}
 }
-.float-left {
-	float: left;
-}
-.float-none {
-	float: none;
-}
+// 清除浮动
 .clear {
 	clear: both;
 }
 
 // 溢出
-.overflow-auto {
-	overflow: auto;
+@each $key in auto, hidden, visible, scroll {
+	.overflow-#{$key} {
+		overflow: $key;
+	}
 }
-.overflow-hidden {
-	overflow: hidden;
-}
-.overflow-visible {
-	overflow: visible;
+// 定位
+@each $key in relative, absolute, fixed, sticky {
+	.#{$key} {
+		position: $key;
+	}
 }
 
-// display
-.block {
-	display: block;
+// Top / Right / Bottom / Left
+.inset-0 {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
-.inline-block {
-	display: inline-block;
+
+.inset-x-0 {
+	left: 0;
+	right: 0;
 }
-.inline {
-	display: inline;
+
+.inset-y-0 {
+	top: 0;
+	bottom: 0;
 }
-.flex {
-	display: flex;
-}
-.inline-flex {
-	display: inline-flex;
-}
-.none {
-	display: none;
+
+@each $key in top, right, left, bottom {
+	.#{$key}-0 {
+		#{$key}: 0;
+	}
 }
 
 // 可见性
 .visible {
 	visibility: visible;
 }
-.hidden {
+.invisible {
 	visibility: hidden;
 }
 
-// 宽度
-@for $i from 0 through 200 {
-	@if $i % 2 == 0 or $i % 5 == 0 {
-		.w-#{$i} {
-			width: #{$i}px;
-		}
+// 层级
+@for $i from 0 to 5 {
+	.z-#{$i} {
+		z-index: $i;
 	}
 }
-// 高度
-@for $i from 0 through 200 {
-	@if $i % 2 == 0 or $i % 5 == 0 {
-		.h-#{$i} {
-			height: #{$i}px;
-		}
-	}
+.-z-1 {
+	z-index: -1;
 }
-@for $i from 0 through 30 {
-	@if $i % 2 == 0 or $i % 5 == 0 {
-		.lh-#{$i} {
-			line-height: #{$i}px;
-		}
-	}
+.z-max {
+	z-index: 9999;
+}
+.z-min {
+	z-index: -9999;
+}
+.z-auto	{
+	z-index: auto;
 }

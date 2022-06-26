@@ -1,0 +1,26 @@
+.appearance-none {
+  appearance: none;
+}
+
+@each $key in pointer, wait, move, not-allowed {
+  .cursor-#{$key} {
+    cursor: $key;
+  }
+}
+
+.resize-none {
+  resize: none;
+}
+.resize-x {
+  resize: horizontal;
+}
+.resize-y {
+  resize: vertical;
+}
+.resize {
+  resize: both;
+}
+
+.select-none {
+  user-select: none;
+}

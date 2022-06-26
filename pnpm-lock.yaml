@@ -40,6 +40,7 @@ specifiers:
   jest: ^25.4.0
   mini-types: '*'
   miniprogram-api-typings: '*'
+  postcss-class-rename: ^1.0.1
   postcss-comment: ^2.0.0
   regenerator-runtime: ^0.12.1
   sass: ^1.49.9
@@ -93,6 +94,7 @@ devDependencies:
   jest: 25.5.4
   mini-types: 0.1.7
   miniprogram-api-typings: 3.4.5
+  postcss-class-rename: 1.0.1
   postcss-comment: 2.0.0
   sass: 1.49.9
   sass-loader: 12.6.0_sass@1.49.9
@@ -7901,6 +7903,10 @@ packages:
       postcss: 7.0.39
       postcss-selector-parser: 6.0.9
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-class-rename/1.0.1:
+    resolution: {integrity: sha512-p7mjgoinuuKL7wvxzrj3BD5wN9mHUNNwHCS7sEMd0BsrTC+ly07ie9tqLzEeZEEYhBGWV8FJK69AHI5S/1FV9g==}
     dev: true
 
   /postcss-colormin/4.0.3:
