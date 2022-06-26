@@ -74,7 +74,7 @@ ccc #ccc,
 666 #666,
 999 #999,
 {
-  .text-#{$key} {
+  .text-#{""+$key} {
     color: $value;
   }
 }

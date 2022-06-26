@@ -4,7 +4,9 @@
 @import 'styles/flex.scss';
 @import 'styles/spacing.scss';
 @import 'styles/dimension.scss';
-@import 'styles/typography.scss';
 @import 'styles/bg.scss';
+// 排版放在后面，保证字体颜色能覆盖掉bg的字体颜色
+@import 'styles/typography.scss';
+
 @import 'styles/border.scss';
 @import 'styles/Interactivity.scss';

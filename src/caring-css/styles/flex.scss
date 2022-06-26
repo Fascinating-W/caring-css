@@ -91,11 +91,9 @@ nowrap {
 .justify-between {
 	justify-content: space-between;
 }
-// 使每个项目两侧的距离相等。
 .justify-around {
 	justify-content: space-around;
-}
-// 使每个项目周围的距离相等,但不像使用 justify-around 时项目之间有双倍的距离。
+} 
 .justify-evenly {
 	justify-content: space-evenly;
 }
@@ -155,6 +153,9 @@ evenly space-evenly {
 }
 // 使用 grid-cols-{n} 功能类来创建有 n 个同等大小的列的网格。
 @for $i from 1 through 6 {
+	.grid-#{$i} {
+		grid-template-columns: repeat($i, minmax(0, 1fr));
+	}
 	.grid-cols-#{$i} {
 		grid-template-columns: repeat($i, minmax(0, 1fr));
 	}
