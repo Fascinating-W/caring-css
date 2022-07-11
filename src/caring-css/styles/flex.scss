@@ -154,6 +154,7 @@ evenly space-evenly {
 // 使用 grid-cols-{n} 功能类来创建有 n 个同等大小的列的网格。
 @for $i from 1 through 6 {
 	.grid-#{$i} {
+		display: grid;
 		grid-template-columns: repeat($i, minmax(0, 1fr));
 	}
 	.grid-cols-#{$i} {
@@ -169,6 +170,9 @@ evenly space-evenly {
 	.col-span-#{$i} {
 		grid-column: span $i / span $i;
 	}
+	.row-span-#{$i} {
+		grid-row: span $i / span $i;
+	}
 }
 .grid-cols-none {
 	grid-template-columns: none;
@@ -181,6 +185,12 @@ evenly space-evenly {
 }
 .col-span-full {
 	grid-column: 1 / -1;
+}
+.row-auto {
+	grid-row: auto;
+}
+.row-span-full {
+	grid-row: 1 / -1;
 }
 
 // 用于控制网格中元素如何自动放置的功能类。

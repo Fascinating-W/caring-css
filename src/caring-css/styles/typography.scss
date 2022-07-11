@@ -34,7 +34,7 @@
 }
 
 // 行高：12-40px
-@for $i from 12 through 40 {
+@for $i from 12 through 48 {
   @if $i % 4==0 {
     .leading-#{$i} {
       line-height: #{$i}px;

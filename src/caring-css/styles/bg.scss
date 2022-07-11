@@ -11,12 +11,6 @@ pink #e03997 #f9d7ea,
 olive #8dc63f #e8f4d9,
 brown #a5673f #ede1d9,
 grey #8799a3 #e7ebed,
-gray #aaaaaa,
-black #000,
-ccc #ccc,
-333 #333,
-666 #666,
-999 #999,
 {
 	.bg-#{""+$key} {
 		background-color: $value;
@@ -28,24 +22,17 @@ ccc #ccc,
 	}
 }
 
-.bg-gray {
-	background-color: #f0f0f0;
-}
-
 @each $key, $value in 
 gray #f0f0f0,
 black #000,
 white #fff,
 f8 #f8f8f8,
-eee #eee,
 transparent transparent,
 current currentColor{
 	.bg-#{""+$key} {
 		background-color: $value;
 	}
 }
-
-
 
 @each $key in auto, cover, contain {
 	.bg-#{$key} {

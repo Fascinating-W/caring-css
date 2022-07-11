@@ -5,7 +5,67 @@
 			"style": {
 				"navigationBarTitleText": "演示"
 			}
-		}
+		},
+		{
+			"path": "pages/index/layout",
+			"style": {
+				"navigationBarTitleText": "布局"
+			}
+		},
+		{
+      "path": "pages/index/flex",
+      "style": {
+        "navigationBarTitleText": "弹性"
+      }
+    },
+		{
+      "path": "pages/index/grid",
+      "style": {
+        "navigationBarTitleText": "网格"
+      }
+    },
+		{
+      "path": "pages/index/spacing",
+      "style": {
+        "navigationBarTitleText": "间距"
+      }
+    },
+		{
+      "path": "pages/index/dimension",
+      "style": {
+        "navigationBarTitleText": "尺寸"
+      }
+    },
+		{
+      "path": "pages/index/typography",
+      "style": {
+        "navigationBarTitleText": "排版"
+      }
+    },
+		{
+      "path": "pages/index/background",
+      "style": {
+        "navigationBarTitleText": "背景"
+      }
+    },
+		{
+      "path": "pages/index/border",
+      "style": {
+        "navigationBarTitleText": "边框"
+      }
+    },
+		{
+      "path": "pages/index/other",
+      "style": {
+        "navigationBarTitleText": "其它"
+      }
+    },
+		{
+      "path": "pages/index/demo",
+      "style": {
+        "navigationBarTitleText": "演示"
+      }
+    }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
