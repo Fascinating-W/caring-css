@@ -6,7 +6,7 @@
         <span class="ml-5 text-green">固定宽度</span>
       </div>
       <div class="m bg-green-light rounded p">
-        <div class="bg-green rounded p-5 w-30 text-10 mb-5">w-60</div>
+        <div class="bg-green rounded p-5 w-30 text-10 mb-5">w-30</div>
         <div class="bg-green rounded p-5 w-60 text-12 mb-5">w-60</div>
         <div class="bg-green rounded p-5 w-120 text-12 mb-5">w-120</div>
         <div class="bg-green rounded p-5 w-200 text-14 mb-5">w-200</div>
