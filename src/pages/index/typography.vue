@@ -10,9 +10,18 @@
         <div class="bg-blue rounded p-5 text-12 mb-5">text-12</div>
         <div class="bg-blue rounded p-5 text-14 mb-5">text-14</div>
         <div class="bg-blue rounded p-5 text-16 mb-5">text-16, text-base</div>
-        <div class="bg-blue rounded p-5 text-20 mb-5">text-20</div>
-        <div class="bg-blue rounded p-5 text-30 mb-5">text-30</div>
-        <div class="bg-blue rounded p-5 text-40 mb-5">text-40</div>
+        <div class="bg-blue rounded p-5 text-18 mb-5">
+          text-18 text-h4 四级标题
+        </div>
+        <div class="bg-blue rounded p-5 text-20 mb-5">
+          text-20 text-h3 三级标题
+        </div>
+        <div class="bg-blue rounded p-5 text-24 mb-5">
+          text-24 text-h2 二级标题
+        </div>
+        <div class="bg-blue rounded p-5 text-28 mb-5">
+          text-28 text-h1 一级标题
+        </div>
       </div>
       <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-blue"></span>
@@ -71,28 +80,34 @@
         <span class="ml-5 text-blue">文本溢出</span>
       </div>
       <div class="m bg-blue-light rounded p">
-        <div class="bg-blue rounded p-5 mb-5 truncate">truncate，truncate，truncate，truncate，truncate</div>
-        <div class="bg-blue rounded p-5 mb-5 line-1">line-1,line-1,line-1,line-1,line-1,line-1,line-1,</div>
-        <div class="bg-blue rounded p-5 mb-5 line-2">line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，</div>
+        <div class="bg-blue rounded p-5 mb-5 truncate">
+          truncate，truncate，truncate，truncate，truncate
+        </div>
+        <div class="bg-blue rounded p-5 mb-5 line-1">
+          line-1,line-1,line-1,line-1,line-1,line-1,line-1,
+        </div>
+        <div class="bg-blue rounded p-5 mb-5 line-2">
+          line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，line-2，
+        </div>
       </div>
       <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-blue"></span>
         <span class="ml-5 text-blue">文本换行</span>
       </div>
       <div class="m bg-blue-light rounded p">
-        <div class="bg-blue rounded p-5 mb-5 break-all">break-all，break-all，break-all，break-all，break-all，break-all</div>
-        <div class="bg-blue rounded p-5 mb-5 whitespace-nowrap">whitespace-nowrap, whitespace-nowrap</div>
+        <div class="bg-blue rounded p-5 mb-5 break-all">
+          break-all，break-all，break-all，break-all，break-all，break-all
+        </div>
+        <div class="bg-blue rounded p-5 mb-5 whitespace-nowrap">
+          whitespace-nowrap, whitespace-nowrap
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

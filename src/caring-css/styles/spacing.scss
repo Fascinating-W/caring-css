@@ -1,95 +1,106 @@
 // 居中对齐
-.m-auto,.view-center {
-	margin: auto
+.m-auto {
+  margin: auto;
 }
 // 块级容器右对齐
-.view-right {
-	margin-left: auto;
+.m-right {
+  margin-left: auto;
 }
 
 // 默认 15px 间距
-@each $key,$value in 
-m margin,
-p padding,
-mt margin-top,
-ml margin-left,
-mr margin-right,
-mb margin-bottom,
-pt padding-top,
-pb padding-bottom,
-pl padding-left,
-pr padding-right {
-	.#{$key} {
-		#{$value}: 15px;
-	}
+@each $key, $value in m margin, p padding, mt margin-top, ml margin-left,
+  mr margin-right, mb margin-bottom, pt padding-top, pb padding-bottom,
+  pl padding-left, pr padding-right
+{
+  .#{$key} {
+    #{$value}: 15px;
+  }
+}
+@each $key, $value, $value2 in mx margin-left margin-right,
+  my margin-top margin-bottom, px padding-left padding-right,
+  py padding-top padding-bottom
+{
+  .#{$key} {
+    #{$value}: 15px;
+    #{$value2}: 15px;
+  }
 }
 
 // 边距 0 - 30px
 @for $i from 0 through 30 {
-	// 只要双数和能被5除尽的数
-	@if $i % 2 == 0 or $i % 5 == 0  {
-		.m-#{$i} {
-			margin: #{$i}px;
-		}
-		.p-#{$i} {
-			padding: #{$i}px;
-		}
-		
-		.mx-#{$i} {
-			margin-left: #{$i}px;
-			margin-right: #{$i}px;
-		}
-		.my-#{$i} {
-			margin-top: #{$i}px;
-			margin-bottom: #{$i}px;
-		}
-		.px-#{$i} {
-			padding-left: #{$i}px;
-			padding-right: #{$i}px;
-		}
-		.py-#{$i} {
-			padding-top: #{$i}px;
-			padding-bottom: #{$i}px;
-		}
-		/* #ifdef H5 */
-		.space-x-#{$i} {
-			&>:not([hidden])~:not([hidden]) {
-				--caring-space-x-reverse: 0;
-				margin-right: calc(#{$i}px * var(--caring-space-x-reverse));
-				margin-left: calc(#{$i}px * calc(1 - var(--caring-space-x-reverse)));
-			}
-		}
-		
-		.space-y-#{$i} {
-			&>:not([hidden])~:not([hidden]) {
-				--caring-space-y-reverse: 0;
-				margin-top: calc(#{$i}px * calc(1 - var(--caring-space-y-reverse)));
-				margin-bottom: calc(#{$i}px * var(--caring-space-y-reverse));
-			}
-		}
-		/* #endif */
-		
-		@each $short, $long in l left, t top, r right, b bottom{
-			// 缩写版，结果如： m-l-30
-			// 定义外边距
-			.m#{$short}-#{$i} {
-				margin-#{$long}: $i + px;
-			}
-			
-			// 定义内边距
-			.p#{$short}-#{$i} {
-				padding-#{$long}: $i + px;
-			}
-		}
-	}
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .m-#{$i} {
+      margin: #{$i}px;
+    }
+    .p-#{$i} {
+      padding: #{$i}px;
+    }
 
+    .mx-#{$i} {
+      margin-left: #{$i}px;
+      margin-right: #{$i}px;
+    }
+    .-mx-#{$i} {
+      margin-left: #{-$i}px;
+      margin-right: #{-$i}px;
+    }
+    .my-#{$i} {
+      margin-top: #{$i}px;
+      margin-bottom: #{$i}px;
+    }
+    .px-#{$i} {
+      padding-left: #{$i}px;
+      padding-right: #{$i}px;
+    }
+    .py-#{$i} {
+      padding-top: #{$i}px;
+      padding-bottom: #{$i}px;
+    }
+    /* #ifdef H5 */
+    .space-x-#{$i} {
+      & > :not([hidden]) ~ :not([hidden]) {
+        --caring-space-x-reverse: 0;
+        margin-right: calc(#{$i}px * var(--caring-space-x-reverse));
+        margin-left: calc(#{$i}px * calc(1 - var(--caring-space-x-reverse)));
+      }
+    }
+
+    .space-y-#{$i} {
+      & > :not([hidden]) ~ :not([hidden]) {
+        --caring-space-y-reverse: 0;
+        margin-top: calc(#{$i}px * calc(1 - var(--caring-space-y-reverse)));
+        margin-bottom: calc(#{$i}px * var(--caring-space-y-reverse));
+      }
+    }
+    /* #endif */
+
+    @each $short, $long in l left, t top, r right, b bottom {
+      // 缩写版，结果如： m-l-30
+      // 定义外边距
+      .m#{$short}-#{$i} {
+        margin-#{$long}: #{$i}px;
+      }
+
+      // 定义内边距
+      .p#{$short}-#{$i} {
+        padding-#{$long}: #{$i}px;
+      }
+    }
+  }
 }
 
 /* #ifdef H5 */
-.space-x-reverse> :not([hidden])~ :not([hidden]) {
-	--caring-space-x-reverse: 1;
+// todo 分割线
+// .divide-x > :not([hidden]) ~ :not([hidden]) {
+//   --caring-divide-x-reverse: 0;
+//   border-right-width: calc(1px * var(--caring-divide-x-reverse));
+//   border-left-width: calc(1px * calc(1 - var(--caring-divide-x-reverse)));
+//   border-color: red;
+// }
+.space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --caring-space-x-reverse: 1;
 }
-.space-y-reverse> :not([hidden])~ :not([hidden]) {
-	--caring-space-y-reverse: 1;
+.space-y-reverse > :not([hidden]) ~ :not([hidden]) {
+  --caring-space-y-reverse: 1;
 }
 /* #endif */

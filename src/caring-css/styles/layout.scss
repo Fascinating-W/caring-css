@@ -1,93 +1,111 @@
+/*
+ * @Author: Wanko
+ * @Date: 2022-05-31 17:19:10
+ * @LastEditors: Wanko
+ * @LastEditTime: 2022-12-01 17:37:02
+ * @Description: 
+ */
+
 // Box Sizing
 .box-border {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .box-content {
-	box-sizing: content-box;
+  box-sizing: content-box;
 }
-
 
 // Display
-@each $key in  block, inline-block,inline, flex,inline-flex, none, grid{
-	.#{$key} {
-		display: $key;
-	}
+@each $key in block, inline-block, inline, flex, inline-flex, none, grid {
+  .#{$key} {
+    display: $key;
+  }
 }
 .hidden {
-	display: none;
+  display: none;
 }
 
 // 浮动
 @each $key in right, left, none {
-	.float-#{$key} {
-		float: $key;
-	}
+  .float-#{$key} {
+    float: $key;
+  }
 }
 // 清除浮动
 .clear {
-	clear: both;
+  clear: both;
 }
 
 // 溢出
 @each $key in auto, hidden, visible, scroll {
-	.overflow-#{$key} {
-		overflow: $key;
-	}
+  .overflow-#{$key} {
+    overflow: $key;
+  }
 }
 // 定位
 @each $key in relative, absolute, fixed, sticky {
-	.#{$key} {
-		position: $key;
-	}
+  .#{$key} {
+    position: $key;
+  }
 }
 
 // Top / Right / Bottom / Left
 .inset-0 {
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .inset-x-0 {
-	left: 0;
-	right: 0;
+  left: 0;
+  right: 0;
 }
 
 .inset-y-0 {
-	top: 0;
-	bottom: 0;
+  top: 0;
+  bottom: 0;
 }
 
+// 定位 -50px -- 50px
 @each $key in top, right, left, bottom {
-	.#{$key}-0 {
-		#{$key}: 0;
-	}
+  @for $i from -50 through 50 {
+    @if $i % 2==0 or $i % 5==0 {
+      @if $i < 0 {
+        .-#{$key}-#{-$i} {
+          #{$key}: #{$i}px;
+        }
+      } @else {
+        .#{$key}-#{$i} {
+          #{$key}: #{$i}px;
+        }
+      }
+    }
+  }
 }
 
 // 可见性
 .visible {
-	visibility: visible;
+  visibility: visible;
 }
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 // 层级
 @for $i from 0 to 5 {
-	.z-#{$i} {
-		z-index: $i;
-	}
+  .z-#{$i} {
+    z-index: $i;
+  }
 }
 .-z-1 {
-	z-index: -1;
+  z-index: -1;
 }
 .z-max {
-	z-index: 9999;
+  z-index: 9999;
 }
 .z-min {
-	z-index: -9999;
+  z-index: -9999;
 }
-.z-auto	{
-	z-index: auto;
+.z-auto {
+  z-index: auto;
 }

@@ -7,70 +7,75 @@
 .rounded-full {
   border-radius: 9999px;
 }
+.rounded-none {
+  border-radius: none;
+}
 @for $i from 6 through 24 {
   @if $i % 2==0 or $i % 5==0 {
     .rounded-#{$i} {
       border-radius: #{$i}px;
     }
   }
+  @each $key, $value in tl top-left, tr top-right, bl bottom-left,
+    br bottom-right
+  {
+    .rounded-#{$key}-#{$i} {
+      border-#{$value}-radius: #{$i}px;
+    }
+  }
+  @each $key, $value, $value2 in t top-left top-right,
+    b bottom-left bottom-right, l top-left bottom-left,
+    r top-right bottom-right br bottom-right
+  {
+    .rounded-#{$key}-#{$i} {
+      border-#{$value}-radius: #{$i}px;
+      border-#{$value2}-radius: #{$i}px;
+    }
+  }
 }
 
-/* start--Retina 屏幕下的 1px 边框--start */
+@each $key, $value, $value2 in t-full top-left top-right,
+  b-full bottom-left bottom-right, l-full top-left bottom-left,
+  r-full top-right bottom-right br bottom-right
+{
+  .rounded-#{$key} {
+    border-#{$value}-radius: 9999px;
+    border-#{$value2}-radius: 9999px;
+  }
+}
+
 .border,
 .border-b,
 .border-l,
 .border-r,
 .border-t,
 .border-tb {
-  position: relative
-}
-
-.border-b:after,
-.border-l:after,
-.border-r:after,
-.border-tb:after,
-.border-t:after,
-.border:after {
-  /* #ifndef APP-NVUE */
-  content: ' ';
-  /* #endif */
-  position: absolute;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  box-sizing: border-box;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  // 多加0.1%，能解决有时候边框缺失的问题
-  width: 199.8%;
-  height: 199.7%;
-  transform: scale(0.5, 0.5);
   border: 0 solid #e4e7ed;
-  z-index: 2;
 }
 
-.border-t:after {
-  border-top-width: 1px
+.border-t {
+  border-top-width: 1px;
 }
 
-.border-l:after {
-  border-left-width: 1px
+.border-l {
+  border-left-width: 1px;
 }
 
-.border-r:after {
-  border-right-width: 1px
+.border-r {
+  border-right-width: 1px;
 }
 
-.border-b:after {
-  border-bottom-width: 1px
+.border-b {
+  border-bottom-width: 1px;
 }
 
-.border-tb:after {
-  border-width: 1px 0
+.border-tb {
+  border-width: 1px 0;
 }
 
-.border:after {
-  border-width: 1px
+.border {
+  border-width: 1px;
 }
-
-/* end--Retina 屏幕下的 1px 边框--end */
+.border-current {
+  border-color: currentColor;
+}

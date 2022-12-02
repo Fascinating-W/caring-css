@@ -1,0 +1,88 @@
+/*
+ * @Author: Wanko
+ * @Date: 2022-12-01 19:38:15
+ * @LastEditors: Wanko
+ * @LastEditTime: 2022-12-02 09:19:52
+ * @Description: 转换
+ */
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transform {
+  --c-translate-x: 0;
+  --c-translate-y: 0;
+  --c-rotate: 0;
+  --c-skew-x: 0;
+  --c-skew-y: 0;
+  --c-scale-x: 1;
+  --c-scale-y: 1;
+  transform: translateX(var(--c-translate-x)) translateY(var(--c-translate-y))
+    rotate(var(--c-rotate)) skewX(var(--c-skew-x)) skewY(var(--c-skew-y))
+    scaleX(var(--c-scale-x)) scaleY(var(--c-scale-y));
+}
+
+.rotate-45 {
+  --c-rotate: 45deg;
+}
+.rotate-90 {
+  --c-rotate: 90deg;
+}
+.rotate-180 {
+  --c-rotate: 180deg;
+}
+
+// * 缩放
+.scale-100 {
+  --c-scale-x: 1;
+  --c-scale-y: 1;
+}
+.scale-50 {
+  --c-scale-x: 0.5;
+  --c-scale-y: 0.5;
+}
+.scale-75 {
+  --c-scale-x: 0.75;
+  --c-scale-y: 0.75;
+}
+.scale-90 {
+  --c-scale-x: 0.9;
+  --c-scale-y: 0.9;
+}
+.scale-95 {
+  --c-scale-x: 0.95;
+  --c-scale-y: 0.95;
+}
+.scale-105 {
+  --c-scale-x: 1.05;
+  --c-scale-y: 1.05;
+}
+.scale-110 {
+  --c-scale-x: 1.1;
+  --c-scale-y: 1.1;
+}
+.scale-125 {
+  --c-scale-x: 1.25;
+  --c-scale-y: 1.25;
+}
+.scale-150 {
+  --c-scale-x: 1.5;
+  --c-scale-y: 1.5;
+}
+/* #ifdef H5 */
+.hover\:rotate-180:hover {
+  --c-rotate: 180deg;
+}
+.hover\:scale-150:hover {
+  --c-scale-x: 1.5;
+  --c-scale-y: 1.5;
+}
+/* #endif */

@@ -1,19 +1,12 @@
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
+/*
+ * @Author: Wanko
+ * @Date: 2022-06-26 16:45:39
+ * @LastEditors: Wanko
+ * @LastEditTime: 2022-12-01 17:34:46
+ * @Description: 基础样式
+ */
 
+// 标题无样式
 h1,
 h2,
 h3,
@@ -24,23 +17,13 @@ h6 {
   font-weight: inherit;
 }
 
+// 列表无样式
 ol,
 ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-svg,
-video,
-canvas,
-audio,
-embed,
-object {
-  display: block;
-  vertical-align: middle;
-}
-
+// 全局盒模型
 *,
 ::before,
 ::after {
@@ -49,9 +32,17 @@ object {
   box-sizing: border-box;
 }
 
-page,html {
+// 全局字体大小和颜色
+page,
+html {
   color: #333;
   font-size: 16px;
+}
+
+html,
+body,
+#app {
+  height: 100%;
 }
 
 .shadow {
@@ -64,6 +55,7 @@ page,html {
   }
 }
 
+// 一般只用在每个页面的最顶层元素，限制此页面宽度为屏幕宽度，不会被子元素撑开
 .page {
   height: 100%;
   overflow: hidden;

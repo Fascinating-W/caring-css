@@ -92,19 +92,25 @@
     </view>
   </view> -->
   <view class="bg-f8 page">
+    <div class="bg-white m p rounded">
+      <div
+        class="w-40 h-40 bg-red-light transition transform hover:rotate-180"
+      ></div>
+      <div class="w-40 h-40 bg-red-light transform scale-50"></div>
+      <div
+        class="w-40 h-40 bg-red-light transition-all transform hover:scale-150"
+      ></div>
+    </div>
+
     <div class="shadow rounded h-100 bg-white m p">
       <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-green"></span>
         <span class="ml-5">字体</span>
       </div>
       <div></div>
-
-
     </div>
     <div class="shadow rounded h-100 bg-white m p">
-      <div class="w-50 h-50 rounded-full bg-yellow-light flex-cc">
-        1
-      </div>
+      <div class="w-50 h-50 rounded-full bg-yellow-light flex-cc">1</div>
     </div>
     <div class="shadow rounded h-100 bg-white m grid-3 gap-5">
       <div class="bg-red-light flex-cc">1</div>
@@ -117,9 +123,7 @@
       <div class="bg-red-light flex-cc">8</div>
       <div class="bg-red-light flex-cc">9</div>
     </div>
-    <div class="shadow rounded h-100 bg-white m">
-      
-    </div>
+    <div class="shadow rounded h-100 bg-white m"></div>
     <div class="shadow rounded h-100 bg-white m"></div>
     <div class="shadow rounded h-100 bg-white m"></div>
   </view>

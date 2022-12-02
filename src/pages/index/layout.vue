@@ -63,7 +63,10 @@
         <span class="ml-5 text-purple">定位</span>
       </div>
       <div class="grid-2 m gap-15">
-        <div class="bg-purple-light rounded p flex-cc">relative</div>
+        <div class="bg-purple-light rounded p flex-cc relative">relative
+
+          <div class="w-10 h-10 bg-red absolute -left-10 -top-10"></div>
+        </div>
         <div class="bg-purple-light rounded p flex-cc">absolute</div>
         <div class="bg-purple-light rounded p flex-cc">fixed</div>
         <div class="bg-purple-light rounded p flex-cc">sticky</div>

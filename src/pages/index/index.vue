@@ -1,20 +1,18 @@
 <template>
   <view class="">
-    <view class="overflow-hidden">
-      <navigator
-        hover-class="none"
-        :url="'/pages/index/' + item.name"
-        class="rounded-8 shadow p m flex justify-between "
-        :class="'bg-'+item.color+'-light'"
-        :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]"
-        navigateTo
-        v-for="(item, index) in list"
-        :key="index"
-      >
-        <view class="">{{ item.title }}</view>
-        <view class="text-Abc">{{ item.name }}</view>
-      </navigator>
-    </view>
+    <navigator
+      hover-class="none"
+      :url="'/pages/index/' + item.name"
+      class="rounded-8 shadow p m flex justify-between"
+      :class="'bg-' + item.color + '-light'"
+      :style="[{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
+      navigateTo
+      v-for="(item, index) in list"
+      :key="index"
+    >
+      <view class="">{{ item.title }}</view>
+      <view class="text-Abc">{{ item.name }}</view>
+    </navigator>
   </view>
 </template>
 
@@ -72,8 +70,7 @@ export default {
           title: '演示',
           name: 'demo',
           color: 'brown'
-        },
-        
+        }
       ]
     }
   },
@@ -83,31 +80,31 @@ export default {
 </script>
 
 <style>
-	@keyframes show {
-		0% {
-			transform: translateY(-50px);
-		}
+@keyframes show {
+  0% {
+    transform: translateY(-50px);
+  }
 
-		60% {
-			transform: translateY(20px);
-		}
+  60% {
+    transform: translateY(20px);
+  }
 
-		100% {
-			transform: translateY(0px);
-		}
-	}
+  100% {
+    transform: translateY(0px);
+  }
+}
 
-	@-webkit-keyframes show {
-		0% {
-			transform: translateY(-50px);
-		}
+@-webkit-keyframes show {
+  0% {
+    transform: translateY(-50px);
+  }
 
-		60% {
-			transform: translateY(20px);
-		}
+  60% {
+    transform: translateY(20px);
+  }
 
-		100% {
-			transform: translateY(0px);
-		}
-	}
+  100% {
+    transform: translateY(0px);
+  }
+}
 </style>

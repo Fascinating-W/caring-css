@@ -3,11 +3,35 @@
     <div class="shadow rounded bg-white m p">
       <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-yellow"></span>
+        <span class="ml-5 text-yellow">水平间距space-x-{size}</span>
+      </div>
+      <div class="m bg-yellow-light rounded p flex space-x-15">
+        <div class="bg-yellow rounded p w-20">1</div>
+        <div class="bg-yellow rounded p w-20">2</div>
+        <div class="bg-yellow rounded p w-20">3</div>
+        <div class="bg-yellow rounded p w-20">4</div>
+      </div>
+      <div class="test-18 font-bold flex-center">
+        <span class="inline-block w-4 h-20 rounded bg-yellow"></span>
+        <span class="ml-5 text-yellow">垂直间距space-y-{size}</span>
+      </div>
+      <div class="m bg-yellow-light rounded p space-y-15">
+        <div class="bg-yellow rounded p w-20">1</div>
+        <div class="bg-yellow rounded p w-20">2</div>
+        <div class="bg-yellow rounded p w-20">3</div>
+        <div class="bg-yellow rounded p w-20">4</div>
+      </div>
+      <div class="test-18 font-bold flex-center">
+        <span class="inline-block w-4 h-20 rounded bg-yellow"></span>
         <span class="ml-5 text-yellow">居中对齐</span>
       </div>
       <div class="m bg-yellow-light rounded p">
-        <div class="bg-yellow rounded p w-160 m-auto">m-auto, view-center</div>
+        <div class="bg-yellow rounded p w-160 m-auto">m-auto</div>
       </div>
+
+      <!-- <div class="m bg-yellow-light rounded p">
+        <div class="bg-yellow rounded -my-15">111</div>
+      </div> -->
     </div>
     <div class="shadow rounded bg-white m p">
       <div class="test-18 font-bold flex-center">
@@ -15,7 +39,7 @@
         <span class="ml-5 text-yellow">右对齐</span>
       </div>
       <div class="m bg-yellow-light rounded p">
-        <div class="bg-yellow rounded p w-100 view-right">view-right</div>
+        <div class="bg-yellow rounded p w-100 m-right">m-right</div>
       </div>
     </div>
     <div class="shadow rounded bg-white m p">
@@ -103,11 +127,7 @@
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
