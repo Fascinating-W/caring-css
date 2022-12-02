@@ -1,0 +1,14 @@
+page,
+html {
+  color: red;
+  margin: 0;
+}
+p {
+  height: 500px;
+  .test {
+    width: 200px;
+    &-big {
+      height: 20px;
+    }
+  }
+}

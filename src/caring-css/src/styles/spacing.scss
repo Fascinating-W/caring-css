@@ -57,21 +57,21 @@
       padding-bottom: #{$i}px;
     }
     /* #ifdef H5 */
-    .space-x-#{$i} {
-      & > :not([hidden]) ~ :not([hidden]) {
-        --caring-space-x-reverse: 0;
-        margin-right: calc(#{$i}px * var(--caring-space-x-reverse));
-        margin-left: calc(#{$i}px * calc(1 - var(--caring-space-x-reverse)));
-      }
-    }
+    // .space-x-#{$i} {
+    //   & > :not([hidden]) ~ :not([hidden]) {
+    //     --caring-space-x-reverse: 0;
+    //     margin-right: calc(#{$i}px * var(--caring-space-x-reverse));
+    //     margin-left: calc(#{$i}px * calc(1 - var(--caring-space-x-reverse)));
+    //   }
+    // }
 
-    .space-y-#{$i} {
-      & > :not([hidden]) ~ :not([hidden]) {
-        --caring-space-y-reverse: 0;
-        margin-top: calc(#{$i}px * calc(1 - var(--caring-space-y-reverse)));
-        margin-bottom: calc(#{$i}px * var(--caring-space-y-reverse));
-      }
-    }
+    // .space-y-#{$i} {
+    //   & > :not([hidden]) ~ :not([hidden]) {
+    //     --caring-space-y-reverse: 0;
+    //     margin-top: calc(#{$i}px * calc(1 - var(--caring-space-y-reverse)));
+    //     margin-bottom: calc(#{$i}px * var(--caring-space-y-reverse));
+    //   }
+    // }
     /* #endif */
 
     @each $short, $long in l left, t top, r right, b bottom {
@@ -97,10 +97,10 @@
 //   border-left-width: calc(1px * calc(1 - var(--caring-divide-x-reverse)));
 //   border-color: red;
 // }
-.space-x-reverse > :not([hidden]) ~ :not([hidden]) {
-  --caring-space-x-reverse: 1;
-}
-.space-y-reverse > :not([hidden]) ~ :not([hidden]) {
-  --caring-space-y-reverse: 1;
-}
+// .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+//   --caring-space-x-reverse: 1;
+// }
+// .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
+//   --caring-space-y-reverse: 1;
+// }
 /* #endif */

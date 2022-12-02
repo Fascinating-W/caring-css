@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-12-01 19:38:15
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-02 09:19:52
+ * @LastEditTime: 2022-12-02 14:46:10
  * @Description: 转换
  */
 
@@ -78,11 +78,11 @@
   --c-scale-y: 1.5;
 }
 /* #ifdef H5 */
-.hover\:rotate-180:hover {
-  --c-rotate: 180deg;
-}
-.hover\:scale-150:hover {
-  --c-scale-x: 1.5;
-  --c-scale-y: 1.5;
-}
+// .hover\:rotate-180:hover {
+//   --c-rotate: 180deg;
+// }
+// .hover\:scale-150:hover {
+//   --c-scale-x: 1.5;
+//   --c-scale-y: 1.5;
+// }
 /* #endif */
