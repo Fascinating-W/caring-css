@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-06-26 16:45:39
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-01 17:34:46
+ * @LastEditTime: 2022-12-03 13:53:21
  * @Description: 基础样式
  */
 
@@ -39,6 +39,7 @@ html {
   font-size: 16px;
 }
 
+// 不可给page设置100%，会使得页面的原始滚动范围失效，如果页面过长，会使得滚动区域的内容在tabbar内（当tab存在或navbar存在时，100%会使得页面的高度是整个屏幕，tab的高度和navbar的高度不在里面）
 html,
 body,
 #app {

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "pub": "sh release.sh",
     "serve": "npm run dev:h5",
     "dev": "npm run dev:mp-weixin",
     "build": "npm run build:h5",
