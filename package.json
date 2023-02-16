@@ -1,6 +1,6 @@
 {
   "name": "caring-css",
-  "version": "0.1.5",
+  "version": "0.1.28",
   "private": true,
   "scripts": {
     "pub": "sh release.sh",
