@@ -3,7 +3,7 @@
  # @Author: Wanko
  # @Date: 2023-02-16 18:41:13
  # @LastEditors: Wanko
- # @LastEditTime: 2023-02-16 19:06:33
+ # @LastEditTime: 2023-02-16 19:10:35
  # @Description: 
 ### 
 set -e
@@ -16,7 +16,7 @@ read -p "Releasing $VERSION - are you sure? (y/n)" -n 1 -r
 echo  # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  echo "Releasing $VERSION ..."
+  echo "🕙 Releasing $VERSION ..."
   
   git ci "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
@@ -24,9 +24,6 @@ then
   npm version $VERSION --message "[release] $VERSION"
   cd ../../
   git push origin master
-
-  #cd src/caring-css
-  #npm version $VERSION --message "[release] $VERSION"
-  #npm publish
+  npm publish
 fi
-echo "$VERSION publish success"
+echo "🎉 $VERSION version publish success"
