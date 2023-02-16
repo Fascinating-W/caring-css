@@ -1,8 +1,8 @@
 {
   "name": "caring-css",
-  "version": "0.1.12",
+  "version": "0.1.9",
   "files": [
-    "caring-css"
+    "!src/caring-css/"
   ],
   "repository": {
     "type": "git",
