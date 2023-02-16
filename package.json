@@ -1,7 +1,13 @@
 {
   "name": "caring-css",
   "version": "0.1.7",
-  "private": true,
+  "files": [
+    "src/caring-css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fascinating-W/caring-css"
+  },
   "scripts": {
     "pub": "sh release.sh",
     "serve": "npm run dev:h5",
