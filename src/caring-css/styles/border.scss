@@ -1,6 +1,6 @@
 // 圆角
 // 默认8px,
-// 范围 10-24px
+// 范围 4-24px
 .rounded {
   border-radius: 8px;
 }
@@ -10,7 +10,7 @@
 .rounded-none {
   border-radius: none;
 }
-@for $i from 10 through 24 {
+@for $i from 4 through 24 {
   @if $i % 2==0 or $i % 5==0 {
     .rounded-#{$i} {
       border-radius: #{$i}px;
