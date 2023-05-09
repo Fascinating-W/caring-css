@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-06-25 18:54:32
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-02 10:25:07
+ * @LastEditTime: 2023-05-09 18:12:46
  * @Description: 排版
  */
 .text-base {
@@ -10,7 +10,6 @@
   line-height: 24px;
 }
 
-// 字体大小10-40px
 @for $i from 10 through 16 {
   .text-#{$i} {
     font-size: #{$i}px;
@@ -36,7 +35,7 @@
   line-height: 28px;
 }
 // 四级标题
-.text-20,
+.text-18,
 .text-h4 {
   font-size: 18px;
   line-height: 26px;
@@ -63,7 +62,7 @@
 }
 
 // 行高：12-40px
-@for $i from 12 through 48 {
+@for $i from 12 through 36 {
   @if $i % 4==0 {
     .leading-#{$i} {
       line-height: #{$i}px;

@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-05-31 17:19:10
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-01 17:57:22
+ * @LastEditTime: 2023-05-09 17:43:01
  * @Description: 
  */
 
@@ -66,16 +66,18 @@
 }
 
 @for $i from 0 through 20 {
-  .gap-#{$i} {
-    gap: #{$i}px;
-  }
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .gap-#{$i} {
+      gap: #{$i}px;
+    }
 
-  .gap-x-#{$i} {
-    column-gap: #{$i}px;
-  }
+    .gap-x-#{$i} {
+      column-gap: #{$i}px;
+    }
 
-  .gap-y-#{$i} {
-    row-gap: #{$i}px;
+    .gap-y-#{$i} {
+      row-gap: #{$i}px;
+    }
   }
 }
 

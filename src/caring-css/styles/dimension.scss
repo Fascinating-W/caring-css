@@ -1,28 +1,43 @@
-// 宽 高 0-200px
-@for $i from 0 through 200 {
-  @if $i % 2==0 or $i % 5==0 {
-    .w-#{$i} {
-      width: #{$i}px;
+// 宽 高 0-300px
+@for $i from 0 through 300 {
+  @if $i <= 24 {
+    @if $i % 2==0 or $i % 5==0 {
+      .w-#{$i} {
+        width: #{$i}px;
+      }
+      .h-#{$i} {
+        height: #{$i}px;
+      }
     }
-    .h-#{$i} {
-      height: #{$i}px;
+  } @else if $i > 24 and $i <= 100 {
+    @if $i % 5==0 {
+      .w-#{$i} {
+        width: #{$i}px;
+      }
+      .h-#{$i} {
+        height: #{$i}px;
+      }
+    }
+  } @else if $i >100 and $i <= 300 {
+    @if $i % 10 ==0 {
+      .w-#{$i} {
+        width: #{$i}px;
+      }
+      .h-#{$i} {
+        height: #{$i}px;
+      }
     }
   }
 }
 
-@each $key,
-$value in 2 50%,
-3 33.333333%,
-4 25%,
-5 20% {
+@each $key, $value in 2 50%, 3 33.333333%, 4 25%, 5 20% {
   .w-1-#{$key} {
-    width: #{$value}
+    width: #{$value};
   }
   .h-1-#{$key} {
-    height: #{$value}
+    height: #{$value};
   }
 }
-
 
 .w-full {
   width: 100%;
