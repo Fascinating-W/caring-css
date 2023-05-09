@@ -15,21 +15,21 @@
     .rounded-#{$i} {
       border-radius: #{$i}px;
     }
-  }
-  @each $key, $value in tl top-left, tr top-right, bl bottom-left,
-    br bottom-right
-  {
-    .rounded-#{$key}-#{$i} {
-      border-#{$value}-radius: #{$i}px;
+    @each $key, $value in tl top-left, tr top-right, bl bottom-left,
+      br bottom-right
+    {
+      .rounded-#{$key}-#{$i} {
+        border-#{$value}-radius: #{$i}px;
+      }
     }
-  }
-  @each $key, $value, $value2 in t top-left top-right,
-    b bottom-left bottom-right, l top-left bottom-left,
-    r top-right bottom-right br bottom-right
-  {
-    .rounded-#{$key}-#{$i} {
-      border-#{$value}-radius: #{$i}px;
-      border-#{$value2}-radius: #{$i}px;
+    @each $key, $value, $value2 in t top-left top-right,
+      b bottom-left bottom-right, l top-left bottom-left,
+      r top-right bottom-right br bottom-right
+    {
+      .rounded-#{$key}-#{$i} {
+        border-#{$value}-radius: #{$i}px;
+        border-#{$value2}-radius: #{$i}px;
+      }
     }
   }
 }
