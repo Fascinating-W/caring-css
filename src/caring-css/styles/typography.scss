@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-06-25 18:54:32
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-09 18:12:46
+ * @LastEditTime: 2023-10-18 14:07:33
  * @Description: 排版
  */
 .text-base {
@@ -57,11 +57,15 @@
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-thin {
   font-weight: 100;
 }
 
-// 行高：12-40px
+// 行高：12-36px
 @for $i from 12 through 36 {
   @if $i % 4==0 {
     .leading-#{$i} {

@@ -1,4 +1,25 @@
 <template>
+  <view class="bg-f8 h-screen">
+    <div
+      v-for="i in 100"
+      :key="item.id"
+      class="bg-white shadow m p rounded flex"
+    >
+      <view class="bg-blue-light w-80 h-80 flex-cc rounded mr-10">imgage</view>
+      <view class="flex-1">
+        <view class="font-bold text-18 flex">
+          <view class="flex-center">
+            <view class="w-4 h-16 bg-green rounded-4"></view>
+            <view class="ml-5">title</view>
+          </view>
+        </view>
+        <view class="flex justify-between mt">
+          <view>author</view>
+          <view>data</view>
+        </view>
+      </view>
+    </div>
+  </view>
   <!-- <view class="bg-f8 page">
     <view class="bg-red-light rounded-full p m shadow text-eee text-price align-top">AAAA</view>
     <view class="bg-white rounded p m text-ABC">aaaa</view>
@@ -91,7 +112,7 @@
       </view>
     </view>
   </view> -->
-  <view class="bg-f8 page">
+  <!-- <view class="bg-f8 page">
     <div class="bg-white m p rounded">
       <div
         class="w-40 h-40 bg-red-light transition transform hover:rotate-180"
@@ -126,7 +147,7 @@
     <div class="shadow rounded h-100 bg-white m"></div>
     <div class="shadow rounded h-100 bg-white m"></div>
     <div class="shadow rounded h-100 bg-white m"></div>
-  </view>
+  </view> -->
 </template>
 
 <script>

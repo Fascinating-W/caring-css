@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="shadow rounded bg-white m p">
-      <div class="test-18 font-bold flex-center">
+      <!-- <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-yellow"></span>
         <span class="ml-5 text-yellow">水平间距space-x-{size}</span>
       </div>
@@ -20,7 +20,7 @@
         <div class="bg-yellow rounded p w-20">2</div>
         <div class="bg-yellow rounded p w-20">3</div>
         <div class="bg-yellow rounded p w-20">4</div>
-      </div>
+      </div> -->
       <div class="test-18 font-bold flex-center">
         <span class="inline-block w-4 h-20 rounded bg-yellow"></span>
         <span class="ml-5 text-yellow">居中对齐</span>
