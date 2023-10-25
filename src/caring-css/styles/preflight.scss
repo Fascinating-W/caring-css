@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-06-26 16:45:39
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-03 13:53:21
+ * @LastEditTime: 2023-10-18 14:23:35
  * @Description: 基础样式
  */
 
@@ -60,4 +60,11 @@ body,
 .page {
   height: 100%;
   overflow: hidden;
+}
+
+// 底部安全区域
+.safe-area-inset-bottom {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
 }

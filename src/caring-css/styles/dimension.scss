@@ -1,6 +1,13 @@
 // 宽 高 0-300px
 @for $i from 0 through 300 {
-  @if $i <= 24 {
+  @if $i < 5 {
+    .w-#{$i} {
+      width: #{$i}px;
+    }
+    .h-#{$i} {
+      height: #{$i}px;
+    }
+  } @else if $i >= 5 and $i <= 30 {
     @if $i % 2==0 or $i % 5==0 {
       .w-#{$i} {
         width: #{$i}px;
@@ -9,7 +16,7 @@
         height: #{$i}px;
       }
     }
-  } @else if $i > 24 and $i <= 100 {
+  } @else if $i > 30 and $i <= 150 {
     @if $i % 5==0 {
       .w-#{$i} {
         width: #{$i}px;
@@ -18,7 +25,7 @@
         height: #{$i}px;
       }
     }
-  } @else if $i >100 and $i <= 300 {
+  } @else if $i >150 and $i <= 300 {
     @if $i % 10 ==0 {
       .w-#{$i} {
         width: #{$i}px;

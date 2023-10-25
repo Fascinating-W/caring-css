@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-05-31 17:19:10
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-09 17:43:01
+ * @LastEditTime: 2023-10-25 14:22:44
  * @Description: 
  */
 
@@ -87,16 +87,18 @@
   between space-between, around space-around, evenly space-evenly
 {
   .justify-#{$key} {
+    display: flex;
     justify-content: #{$value};
   }
 }
 
 @each $key, $value in start flex-start, center center, end flex-end,
-  stretch stretch, baseline flex-baseline
+  stretch stretch, baseline baseline
 {
   // align-stretch
   // 默认值，即flex容器内的子元素默认会拉伸和父元素一样的高度
   .items-#{$key} {
+    display: flex;
     align-items: #{$value};
   }
 }
