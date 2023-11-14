@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-05-31 17:19:10
  * @LastEditors: Wanko
- * @LastEditTime: 2023-10-25 14:22:44
+ * @LastEditTime: 2023-11-09 19:32:09
  * @Description: 
  */
 
@@ -136,7 +136,7 @@
   }
 }
 // 使用 grid-cols-{n} 功能类来创建有 n 个同等大小的列的网格。
-@for $i from 1 through 6 {
+@for $i from 1 through 8 {
   .grid-#{$i} {
     display: grid;
     grid-template-columns: repeat($i, minmax(0, 1fr));
