@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2022-07-11 15:33:45
  * @LastEditors: Wanko
- * @LastEditTime: 2022-12-01 19:25:52
+ * @LastEditTime: 2024-03-01 19:10:02
  * @Description: 
 -->
 <template>
@@ -89,11 +89,12 @@
         <span class="ml-5 text-cyan">单独的边</span>
       </div>
       <div class="flex-wrap m justify-evenly">
-        <div class="rounded p border-l">border-l</div>
-        <div class="rounded p border-t">border-t</div>
-        <div class="rounded p border-r">border-r</div>
-        <div class="rounded p border-b">border-b</div>
-        <div class="rounded p border-tb">border-tb</div>
+        <div class="p border-l">border-l</div>
+        <div class="p border-t">border-t</div>
+        <div class="p border-r">border-r</div>
+        <div class="p border-b">border-b</div>
+        <div class="p border-y">border-y</div>
+        <div class="p border-x">border-x</div>
       </div>
     </div>
     <div class="shadow rounded bg-white m p">

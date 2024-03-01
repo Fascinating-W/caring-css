@@ -43,39 +43,57 @@
     border-#{$value2}-radius: 9999px;
   }
 }
-
-.border,
+.border {
+  border: 1px solid #e4e7ed;
+}
 .border-b,
 .border-l,
 .border-r,
 .border-t,
-.border-tb {
-  border: 0 solid #e4e7ed;
+.border-y, 
+.border-x{
+  position: relative;
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    // 多加0.1%，能解决有时候边框缺失的问题
+    width: 199.8%;
+    height: 199.7%;
+    transform: scale(0.5, 0.5);
+    border: 0 solid #e4e7ed;
+    z-index: 2;
+  }
 }
 
-.border-t {
+.border-t::after{
   border-top-width: 1px;
 }
 
-.border-l {
+.border-l::after {
   border-left-width: 1px;
 }
 
-.border-r {
+.border-r::after {
   border-right-width: 1px;
 }
 
-.border-b {
+.border-b::after {
   border-bottom-width: 1px;
 }
 
-.border-tb {
+.border-y::after {
   border-width: 1px 0;
 }
-
-.border {
-  border-width: 1px;
+.border-x::after {
+  border-width: 0 1px;
 }
+
 .border-current {
   border-color: currentColor;
 }
