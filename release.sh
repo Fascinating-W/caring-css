@@ -3,7 +3,7 @@
  # @Author: Wanko
  # @Date: 2023-02-16 18:41:13
  # @LastEditors: Wanko
- # @LastEditTime: 2024-03-01 19:20:10
+ # @LastEditTime: 2024-03-01 19:27:14
  # @Description: 
 ### 
 set -e
@@ -20,11 +20,10 @@ then
   
   git ci "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
-  
   cd src/caring-css
   npm version $VERSION --message "[release] $VERSION"
   npm publish
   cd ../../
-  git push origin master
+  git cp "[release] $VERSION"
 fi
 echo "🎉 $VERSION version publish success"
